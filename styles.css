@@ -10,13 +10,16 @@ body {
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
 h1 {
     text-align: center;
     color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .section-buttons, .subject-buttons, .test-inputs {
@@ -25,24 +28,40 @@ h1 {
     justify-content: center;
 }
 
-.section-button, .subject-button {
+.section-button {
     display: inline-block;
     width: 150px;
     height: 150px;
     margin: 10px;
     padding: 20px;
-    background-color: #3498db;
+    background: linear-gradient(45deg, #3498db, #2980b9);
     color: #fff;
     text-align: center;
     line-height: 110px;
     text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.subject-button {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 20px;
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: #fff;
+    text-align: center;
+    line-height: 110px;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .section-button:hover, .subject-button:hover {
-    background-color: #2980b9;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .test-inputs {
@@ -61,16 +80,16 @@ h1 {
 button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #2ecc71;
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
     color: #fff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background-color: #27ae60;
+    background: linear-gradient(45deg, #27ae60, #219d55);
 }
 
 .internal-mark {
